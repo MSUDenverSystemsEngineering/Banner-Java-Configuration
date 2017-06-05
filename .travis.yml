@@ -1,0 +1,13 @@
+language: bash
+
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode8.3
+    - os: osx
+      osx_image: xcode7.3
+    - os: osx
+      osx_image: xcode6.4
+
+before_install: brew install shellcheck
+script: shellcheck *.sh
